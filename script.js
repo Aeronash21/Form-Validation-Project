@@ -13,6 +13,7 @@ function validateText(value, minLen, maxLen, required) {
   return '';
 }
 
+//lol
 
 function validateRequired(value) {
   return value && value.trim() !== '';
