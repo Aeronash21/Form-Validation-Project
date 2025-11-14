@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Validation Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Implementing a robust and intelligent form validation system using JavaScript">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Alfred Osagiede">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <form name="myForm" id="myForm">
+        <fieldset>
+            <legend>Personal details:</legend>
+            <label for="fName">First name:</label><br>
+            <input type="text" id="fName" name="fName" autocomplete="on" required autofocus><br>
+            <span id="error-fName" class="error"></span><br>
+            
+            <label for="lName">Last name:</label><br>
+            <input type="text" id="lName" name="lName" autocomplete="on" required><br>
+            <span id="error-lName" class="error"></span><br>
+            
+            <label for="genders">Select your gender:</label>
+            <input list="genders" name="gender" id="gender" required>
+            <datalist id="genders">
+                <option value="Male">
+                <option value="Female">
+                <option value="Other">
+                <option value="Prefer not to say">
+            </datalist><br>
+            <span id="error-gender" class="error"></span><br>
+            
+            <label for="dateOfBirth">Please enter your date of birth:</label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" autocomplete="on" required><br>
+            <span id="error-dateOfBirth" class="error"></span>
+        </fieldset>
+        
+        <br>
+        
+        <fieldset>
+            <legend>Residential details:</legend>
+            <label for="address1">Address line 1:</label><br>
+            <input type="text" id="address1" name="address1" autocomplete="on" required><br>
+            <span id="error-address1" class="error"></span><br>
+            
+            <label for="address2">Address line 2:</label><br>
+            <input type="text" id="address2" name="address2" autocomplete="on"><br>
+            <span id="error-address2" class="error"></span><br>
+            
+            <label for="city">City:</label><br>
+            <input type="text" id="city" name="city" autocomplete="on" required><br>
+            <span id="error-city" class="error"></span><br>
+            
+            <label for="postzipcode">Postal/Zip code:</label><br>
+            <input type="text" id="postzipcode" name="postzipcode" autocomplete="on" required><br>
+            <span id="error-postzipcode" class="error"></span><br>
+            
+            <label for="country">Select your country:</label>
+            <input list="countries" id="country" name="country" required>
+            <datalist id="countries">
+                <option value="United States">
+                <option value="United Kingdom">
+            </datalist><br>
+            <span id="error-country" class="error"></span>
+        </fieldset>
+        
+        <br>
+        
+        <fieldset>
+            <legend>Contact details:</legend>
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" autocomplete="on" placeholder="someone@somewhere.com" required><br>
+            <span id="error-email" class="error"></span><br>
+            
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone" autocomplete="on" placeholder="07123-456789" pattern="[0-9]{5}-[0-9]{6}" required><br>
+            <span id="error-phone" class="error"></span>
+        </fieldset>
+        
+        <br>
+        
+        <fieldset>
+            <legend>Submission:</legend>
+            <label for="terms">Do you accept the terms and conditions?</label>
+            <input type="checkbox" id="terms" name="terms" required><br>
+            <span id="error-terms" class="error"></span><br>
+            
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset" onclick="alert('Form data has been reset.')">
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
